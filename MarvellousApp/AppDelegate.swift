@@ -12,10 +12,24 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var json: Dictionary<String,AnyObject> = [:]
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let filePath = NSBundle.mainBundle().pathForResource("comic", ofType: "json")
+        
+        if let path = filePath, let data = NSData(contentsOfFile: path) {
+           
+            if let dict = try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? Dictionary<String, AnyObject> {
+                json = dict!
+                print(json)
+            }
+        }
+        else {
+            print("no mock found")
+        }
+        
+        
         return true
     }
 
