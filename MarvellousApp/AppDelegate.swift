@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            
             if let dict = try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? Dictionary<String, AnyObject> {
                 json = dict!
-                print(json)
             }
         }
         else {

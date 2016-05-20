@@ -12,7 +12,14 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        if appDelegate.json["results"] != nil  {
+            let array = appDelegate.json["results"] as! Array<AnyObject>
+           
+            print(array)
+            //MAP + CAST
+        }
     }
 
     override func didReceiveMemoryWarning() {

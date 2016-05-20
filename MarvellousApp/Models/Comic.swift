@@ -20,4 +20,7 @@ struct Comic {
     var free: Bool {
         return price == 0.0
     }
+    
+    //Constructeur 
+    //Dictionary -> Comic
 }
