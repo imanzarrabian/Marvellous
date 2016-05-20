@@ -21,6 +21,5 @@ struct Comic {
         return price == 0.0
     }
     
-    //Constructeur 
-    //Dictionary -> Comic
+    //Constructeur prenant en entrée un Dictionary à écrire
 }

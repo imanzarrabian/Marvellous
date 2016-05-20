@@ -19,9 +19,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let filePath = NSBundle.mainBundle().pathForResource("comic", ofType: "json")
         
         if let path = filePath, let data = NSData(contentsOfFile: path) {
-           
-            if let dict = try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? Dictionary<String, AnyObject> {
-                json = dict!
+            
+            
+            //serializedDict est une AnyObject OPTIONNEL car l'operation de conversion de la data vers le json object peut échouer
+            //d'ou le try?
+            let serializedDict = try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+            
+            //METHODE 1
+            
+            //On unwrapp le serializedDict et on vérifie que qu'il est bien "castable" en Dictionary<String, AnyObject>
+            //nouveauté : "la clause where"
+            if let dict = serializedDict where serializedDict is Dictionary<String, AnyObject> {
+                //si le type est castable alors on cast pour de vrai
+                json = dict as! Dictionary<String, AnyObject>
+            }
+ 
+            //METHODE 2 : AUTRE MANIERE DE FAIRE LA MEME CHOSE
+            
+            //cette fois le as? retourne nil si serializedDict "n'est pas castable" et cast dans le cas opposé
+            if let dict2 = serializedDict as? Dictionary<String, AnyObject> {
+                json = dict2
             }
         }
         else {
