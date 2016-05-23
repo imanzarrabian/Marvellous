@@ -27,12 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             //METHODE 1
             
-            //On unwrapp le serializedDict et on vérifie que qu'il est bien "castable" en Dictionary<String, AnyObject>
-            //nouveauté : "la clause where"
-            if let dict = serializedDict where serializedDict is Dictionary<String, AnyObject> {
-                //si le type est castable alors on cast pour de vrai
-                json = dict as! Dictionary<String, AnyObject>
-            }
+//            //On unwrapp le serializedDict et on vérifie que qu'il est bien "castable" en Dictionary<String, AnyObject>
+//            //nouveauté : "la clause where"
+//            if let dict = serializedDict where serializedDict is [String : AnyObject] {
+//                //si le type est castable alors on cast pour de vrai
+//                json = dict as! Dictionary<String, AnyObject>
+//            }
  
             //METHODE 2 : AUTRE MANIERE DE FAIRE LA MEME CHOSE
             

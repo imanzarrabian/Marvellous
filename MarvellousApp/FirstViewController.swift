@@ -21,6 +21,8 @@ class FirstViewController: UIViewController {
         
         if let array = appDelegate.json["results"] as? Array<AnyObject>  {
             //Nous avons donc un array de AnyObject sur lequel nous voulons appliquer une fonction map permettant d'obenir un tableau de Comic : [AnyObject] -> [Comic]
+            
+            //map elle va transformer chq elem de votre array en comic 
             print(array)
 
         }
