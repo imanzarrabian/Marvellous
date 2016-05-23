@@ -15,6 +15,7 @@
 		9C9CE5661CEDC7C60035E334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C9CE5641CEDC7C60035E334 /* LaunchScreen.storyboard */; };
 		9CCCFE4F1CEF0C920010A050 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCFE4E1CEF0C920010A050 /* Comic.swift */; };
 		9CCCFE521CEF186A0010A050 /* comic.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CCCFE511CEF186A0010A050 /* comic.json */; };
+		9CCCFE551CF315200010A050 /* ComicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCFE541CF315200010A050 /* ComicCell.swift */; };
 		B72C4C528BF77C605FD8152F /* Pods_MarvellousApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC535371351B6D3D01153395 /* Pods_MarvellousApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		9C9CE5671CEDC7C60035E334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CCCFE4E1CEF0C920010A050 /* Comic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		9CCCFE511CEF186A0010A050 /* comic.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = comic.json; sourceTree = "<group>"; };
+		9CCCFE541CF315200010A050 /* ComicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicCell.swift; sourceTree = "<group>"; };
 		DC535371351B6D3D01153395 /* Pods_MarvellousApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvellousApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 		9C9CE5581CEDC7C60035E334 /* MarvellousApp */ = {
 			isa = PBXGroup;
 			children = (
+				9CCCFE531CF314FD0010A050 /* Views */,
 				9CCCFE501CEF17B10010A050 /* Mocks */,
 				9CCCFE4D1CEF0C7E0010A050 /* Models */,
 				9C9CE5591CEDC7C60035E334 /* AppDelegate.swift */,
@@ -111,6 +114,14 @@
 				9CCCFE511CEF186A0010A050 /* comic.json */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		9CCCFE531CF314FD0010A050 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9CCCFE541CF315200010A050 /* ComicCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 				9CCCFE4F1CEF0C920010A050 /* Comic.swift in Sources */,
 				9C9CE55A1CEDC7C60035E334 /* AppDelegate.swift in Sources */,
 				9C9CE55C1CEDC7C60035E334 /* FirstViewController.swift in Sources */,
+				9CCCFE551CF315200010A050 /* ComicCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

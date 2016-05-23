@@ -10,6 +10,8 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    var comicsArray: [Comic]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //On accede à l'instance de l'AppDelegate
@@ -23,15 +25,34 @@ class FirstViewController: UIViewController {
             //Nous avons donc un array de AnyObject sur lequel nous voulons appliquer une fonction map permettant d'obenir un tableau de Comic : [AnyObject] -> [Comic]
             
             //map elle va transformer chq elem de votre array en comic 
-            print(array)
+            comicsArray = array.map
+                { Comic(dict: $0 as! [String: AnyObject]) }
+            
+            print(comicsArray)
 
         }
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension FirstViewController : UITableViewDelegate,UITableViewDataSource {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return comicsArray?.count ?? 0
     }
-
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("ComicCell", forIndexPath: indexPath) as! ComicCell
+ 
+        if let array = comicsArray {
+            let comic = array[indexPath.row]
+           // cell.textLabel?.text = comic.title
+            cell.issueNumber.text = "\(comic.issueNumber)"
+        }
+        
+        print("row \(indexPath.row)")
+        return cell
+    }
 }
 

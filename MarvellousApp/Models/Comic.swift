@@ -20,6 +20,30 @@ struct Comic {
     var free: Bool {
         return price == 0.0
     }
-    //Constructeur prenant en entrée un Dictionary à écrire
-
+    
+    //Constructeur prenant en entrée un Dictionary
+    //EXERCICE : UTILISER SWIFTYJSON
+    init(dict: Dictionary<String, AnyObject>) {
+        
+        //Les infos de base
+        title = dict["title"] as! String
+        isbn = dict["isbn"] as! String
+        issueNumber = dict["issueNumber"] as! Int
+        
+        //L'image
+        if let imageDict = dict["thumbnail"] as? [String: AnyObject] {
+            let path = imageDict["path"] as! String
+            let ext = imageDict["extension"] as! String
+            image =  path + "." + ext
+        }
+        
+        //Le prix
+        if let priceDict = dict["prices"] as? [[String: AnyObject]] {
+            if let firstPrice = priceDict.first {
+                price = firstPrice["price"] as! Double
+            }
+        }
+    }
+    
+    
 }

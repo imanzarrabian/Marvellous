@@ -1,0 +1,17 @@
+//
+//  ComicCell.swift
+//  MarvellousApp
+//
+//  Created by Iman Zarrabian on 23/05/16.
+//  Copyright © 2016 Web School Factory. All rights reserved.
+//
+
+import UIKit
+
+class ComicCell: UITableViewCell {
+
+    //title, issueNumber, price (avec macaron free), image
+    
+    @IBOutlet weak var issueNumber: UILabel!
+    @IBOutlet weak var comicIV: UIImageView!
+}
