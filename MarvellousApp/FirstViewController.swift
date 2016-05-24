@@ -50,9 +50,16 @@ extension FirstViewController : UITableViewDelegate,UITableViewDataSource {
         if let array = comicsArray {
             let comic = array[indexPath.row]
             cell.titleLabel.text = comic.title
-            cell.issueNumber.text = "\(comic.issueNumber)"
+            if let desc = comic.description {
+                cell.descriptionLabel.text = desc
+            }
+            else {
+                cell.descriptionLabel.text = "no description"
+            }
             cell.isbnLabel.text = comic.isbn
-            cell.priceLabel.text = String(comic.price)
+            
+            
+            cell.priceLabel.text = comic.free ? "FREE!" : String(comic.price)
             
             if let url = NSURL(string: comic.image),
                 let image = UIImage(named: "comicPlaceholder") {
@@ -63,6 +70,11 @@ extension FirstViewController : UITableViewDelegate,UITableViewDataSource {
         
         print("row \(indexPath.row)")
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 

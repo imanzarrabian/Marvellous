@@ -16,6 +16,7 @@ struct Comic {
     let issueNumber: Int
     var price = 0.0
     var image = ""
+    var description: String?
 
     //computed propertie
     var free: Bool {
@@ -30,6 +31,7 @@ struct Comic {
         title = dict["title"] as! String
         isbn = dict["isbn"] as! String
         issueNumber = dict["issueNumber"] as! Int
+        description = dict["description"] as? String
         
         //L'image
         if let imageDict = dict["thumbnail"] as? [String: AnyObject] {
