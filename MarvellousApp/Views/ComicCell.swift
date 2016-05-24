@@ -12,6 +12,9 @@ class ComicCell: UITableViewCell {
 
     //title, issueNumber, price (avec macaron free), image
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var issueNumber: UILabel!
+    @IBOutlet weak var isbnLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var comicIV: UIImageView!
 }

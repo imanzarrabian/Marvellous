@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class FirstViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //On accede à l'instance de l'AppDelegate
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -47,7 +49,7 @@ extension FirstViewController : UITableViewDelegate,UITableViewDataSource {
  
         if let array = comicsArray {
             let comic = array[indexPath.row]
-           // cell.textLabel?.text = comic.title
+            cell.titleLabel.text = comic.title
             cell.issueNumber.text = "\(comic.issueNumber)"
         }
         

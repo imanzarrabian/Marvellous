@@ -9,6 +9,7 @@
 import Foundation
 
 struct Comic {
+    
     //title, isbn, issue number, price, image
     let title: String
     let isbn: String

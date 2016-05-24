@@ -25,24 +25,74 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lz8-QO-gdu" id="U7B-7z-OeJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJ5-7l-Bys">
-                                                    <rect key="frame" x="13" y="36" width="119" height="128"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sJ5-7l-Bys">
+                                                    <rect key="frame" x="22" y="43" width="80" height="114"/>
+                                                    <color key="backgroundColor" red="0.03311886638" green="0.98149293660000003" blue="0.58472096920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="Avs-OA-bLg"/>
+                                                        <constraint firstAttribute="height" constant="114" id="Lbr-6C-3ls"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsK-hT-eNe">
-                                                    <rect key="frame" x="149" y="143" width="42" height="21"/>
-                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.082320259039999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comic issue number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsK-hT-eNe">
+                                                    <rect key="frame" x="429" y="43" width="156" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="issue number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJb-2R-ynE">
+                                                    <rect key="frame" x="453" y="15" width="108" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcm-gU-PWp">
+                                                    <rect key="frame" x="110" y="43" width="439" height="38"/>
+                                                    <string key="text">Comic Title     @IBOutlet weak var issueNumber: UILabel!
+    @IBOutlet weak var issueNumber: UILabel!
+    @IBOutlet weak var issueNumber: UILabel!
+    @IBOutlet weak var issueNumber: UILabel!
+    @IBOutlet weak var issueNumber: UILabel!
+    @IBOutlet weak var issueNumber: UILabel!
+    @IBOutlet weak var issueNumber: UILabel!
+    @IBOutlet weak var issueNumber: UILabel!
+    @IBOutlet weak var issueNumber: UILabel!
+    @IBOutlet weak var issueNumber: UILabel!
+    @IBOutlet weak var issueNumber: UILabel!
+</string>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comic Isbn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECh-R2-M0b">
+                                                    <rect key="frame" x="475" y="63" width="86" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comic Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZZ-QG-6e3">
+                                                    <rect key="frame" x="480" y="89" width="93" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sJ5-7l-Bys" firstAttribute="leading" secondItem="U7B-7z-OeJ" secondAttribute="leading" constant="22" id="1g9-SV-5Iw"/>
+                                                <constraint firstItem="Dcm-gU-PWp" firstAttribute="leading" secondItem="sJ5-7l-Bys" secondAttribute="trailing" constant="8" id="HTI-SQ-7nR"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dcm-gU-PWp" secondAttribute="trailing" constant="51" id="M3w-TR-YIR"/>
+                                                <constraint firstItem="sJ5-7l-Bys" firstAttribute="centerY" secondItem="U7B-7z-OeJ" secondAttribute="centerY" id="m0G-oA-oFy"/>
+                                                <constraint firstItem="Dcm-gU-PWp" firstAttribute="top" secondItem="sJ5-7l-Bys" secondAttribute="top" id="zAx-3l-V6t"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="comicIV" destination="sJ5-7l-Bys" id="xtU-1B-Ftm"/>
+                                            <outlet property="isbnLabel" destination="ECh-R2-M0b" id="qy8-kN-Owx"/>
                                             <outlet property="issueNumber" destination="VsK-hT-eNe" id="U3n-Kn-8eV"/>
+                                            <outlet property="priceLabel" destination="BZZ-QG-6e3" id="sL4-5A-E6o"/>
+                                            <outlet property="titleLabel" destination="Dcm-gU-PWp" id="878-E2-A1R"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
