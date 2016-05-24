@@ -51,6 +51,14 @@ extension FirstViewController : UITableViewDelegate,UITableViewDataSource {
             let comic = array[indexPath.row]
             cell.titleLabel.text = comic.title
             cell.issueNumber.text = "\(comic.issueNumber)"
+            cell.isbnLabel.text = comic.isbn
+            cell.priceLabel.text = String(comic.price)
+            
+            if let url = NSURL(string: comic.image),
+                let image = UIImage(named: "comicPlaceholder") {
+                
+                cell.comicIV.sd_setImageWithURL(url, placeholderImage: image)
+            }
         }
         
         print("row \(indexPath.row)")

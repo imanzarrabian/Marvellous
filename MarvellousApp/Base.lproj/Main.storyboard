@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--First-->
@@ -21,14 +22,14 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ComicCell" id="Lz8-QO-gdu" customClass="ComicCell" customModule="MarvellousApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ComicCell" id="Lz8-QO-gdu" customClass="ComicCell" customModule="MarvellousApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lz8-QO-gdu" id="U7B-7z-OeJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sJ5-7l-Bys">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comicPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="sJ5-7l-Bys">
                                                     <rect key="frame" x="22" y="43" width="80" height="114"/>
                                                     <color key="backgroundColor" red="0.03311886638" green="0.98149293660000003" blue="0.58472096920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -36,19 +37,19 @@
                                                         <constraint firstAttribute="height" constant="114" id="Lbr-6C-3ls"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comic issue number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsK-hT-eNe">
-                                                    <rect key="frame" x="429" y="43" width="156" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comic issue number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsK-hT-eNe">
+                                                    <rect key="frame" x="178" y="97" width="156" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="issue number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJb-2R-ynE">
-                                                    <rect key="frame" x="453" y="15" width="108" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Issue #:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJb-2R-ynE">
+                                                    <rect key="frame" x="110" y="97" width="60" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcm-gU-PWp">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcm-gU-PWp">
                                                     <rect key="frame" x="110" y="43" width="439" height="38"/>
                                                     <string key="text">Comic Title     @IBOutlet weak var issueNumber: UILabel!
     @IBOutlet weak var issueNumber: UILabel!
@@ -66,24 +67,32 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comic Isbn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECh-R2-M0b">
-                                                    <rect key="frame" x="475" y="63" width="86" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comic Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZZ-QG-6e3">
+                                                    <rect key="frame" x="110" y="131" width="93" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comic Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZZ-QG-6e3">
-                                                    <rect key="frame" x="480" y="89" width="93" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comic Isbn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECh-R2-M0b">
+                                                    <rect key="frame" x="22" y="177" width="66" height="15"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="sJ5-7l-Bys" firstAttribute="leading" secondItem="U7B-7z-OeJ" secondAttribute="leading" constant="22" id="1g9-SV-5Iw"/>
+                                                <constraint firstItem="VsK-hT-eNe" firstAttribute="top" secondItem="yJb-2R-ynE" secondAttribute="top" id="5Uf-t2-7J8"/>
+                                                <constraint firstItem="BZZ-QG-6e3" firstAttribute="top" secondItem="yJb-2R-ynE" secondAttribute="bottom" constant="13" id="A83-Dr-POe"/>
+                                                <constraint firstItem="VsK-hT-eNe" firstAttribute="leading" secondItem="yJb-2R-ynE" secondAttribute="trailing" constant="8" id="CGW-uG-NNZ"/>
                                                 <constraint firstItem="Dcm-gU-PWp" firstAttribute="leading" secondItem="sJ5-7l-Bys" secondAttribute="trailing" constant="8" id="HTI-SQ-7nR"/>
                                                 <constraint firstAttribute="trailing" secondItem="Dcm-gU-PWp" secondAttribute="trailing" constant="51" id="M3w-TR-YIR"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ECh-R2-M0b" secondAttribute="bottom" id="ZEG-6c-rHg"/>
                                                 <constraint firstItem="sJ5-7l-Bys" firstAttribute="centerY" secondItem="U7B-7z-OeJ" secondAttribute="centerY" id="m0G-oA-oFy"/>
+                                                <constraint firstItem="yJb-2R-ynE" firstAttribute="top" secondItem="Dcm-gU-PWp" secondAttribute="bottom" constant="16" id="pRb-7W-KIL"/>
+                                                <constraint firstItem="ECh-R2-M0b" firstAttribute="leading" secondItem="sJ5-7l-Bys" secondAttribute="leading" id="sxG-6b-OMX"/>
+                                                <constraint firstItem="yJb-2R-ynE" firstAttribute="leading" secondItem="Dcm-gU-PWp" secondAttribute="leading" id="tBF-22-VUN"/>
+                                                <constraint firstItem="BZZ-QG-6e3" firstAttribute="leading" secondItem="yJb-2R-ynE" secondAttribute="leading" id="xHY-Xb-PXh"/>
                                                 <constraint firstItem="Dcm-gU-PWp" firstAttribute="top" secondItem="sJ5-7l-Bys" secondAttribute="top" id="zAx-3l-V6t"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -177,6 +186,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="comicPlaceholder" width="80" height="114"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
