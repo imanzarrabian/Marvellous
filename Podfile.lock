@@ -1,11 +1,11 @@
 PODS:
   - Alamofire (3.4.0)
   - CWStatusBarNotification (2.3.4)
-  - Realm (0.103.0):
-    - Realm/Headers (= 0.103.0)
-  - Realm/Headers (0.103.0)
-  - RealmSwift (0.103.0):
-    - Realm (= 0.103.0)
+  - Realm (0.103.2):
+    - Realm/Headers (= 0.103.2)
+  - Realm/Headers (0.103.2)
+  - RealmSwift (0.103.2):
+    - Realm (= 0.103.2)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
@@ -26,8 +26,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   CWStatusBarNotification: 3fec41edcb0ae3677d9febfcb9632d8bdf52294c
-  Realm: 99c44c3a9e075638478d4134e28d9026a6de07c4
-  RealmSwift: daaa1789eb581f2f8c2a05a25f463a6f70df5a5f
+  Realm: 448f0416079fe5b0ed947e7d86f3c4e1c75826cb
+  RealmSwift: 8a45cc8f02dfac093b72a3b5a01d567e27e15891
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

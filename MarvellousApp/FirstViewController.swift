@@ -7,32 +7,38 @@
 //
 
 import UIKit
-import Alamofire
 
 class FirstViewController: UIViewController {
 
     var comicsArray: [Comic]?
+    @IBOutlet weak var comicTV: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //On accede à l'instance de l'AppDelegate
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
-        //on unwrapp le contenu de appDelegate.json["results"] qui est optionnel car le champs "results" peut ne pas exister
-        //on cast par la même occasion ce contenu en un objet Array<AnyObject>
-        //le resultat de l'expression à droite du signe égal est un optionnel car le cast peut ne pas marcher. Utilisation de as? pour avoir le resultat casté ou nil s'il ne marche pas.
-        
-        if let array = appDelegate.json["results"] as? Array<AnyObject>  {
-            //Nous avons donc un array de AnyObject sur lequel nous voulons appliquer une fonction map permettant d'obenir un tableau de Comic : [AnyObject] -> [Comic]
-            
-            //map elle va transformer chq elem de votre array en comic 
-            comicsArray = array.map
-                { Comic(dict: $0 as! [String: AnyObject]) }
-            
-            print(comicsArray)
-
-        }
+        Comic.getRemoteComics ({ (response) in
+    
+            switch response.result {
+            case .Success:
+                if let dict = response.result.value as? Dictionary<String, AnyObject> {
+                    if let dataDict = dict["data"] {
+                        
+                        if let array = dataDict["results"] as? Array<AnyObject>  {
+                            
+                            self.comicsArray = array.map
+                                { Comic(dict: $0 as! [String: AnyObject]) }
+                            
+                            self.comicTV.reloadData()
+                            
+                        }
+                    }
+                }
+                
+            case .Failure(let error):
+                print(error)
+            }
+        })
     }
 }
 
@@ -68,7 +74,7 @@ extension FirstViewController : UITableViewDelegate,UITableViewDataSource {
             }
         }
         
-        print("row \(indexPath.row)")
+        //print("row \(indexPath.row)")
         return cell
     }
     

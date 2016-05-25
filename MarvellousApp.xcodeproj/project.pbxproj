@@ -30,7 +30,6 @@
 		9CBBEE881CF45B4E00F59B52 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEE771CF45B4E00F59B52 /* UIImageView+WebCache.m */; };
 		9CBBEE891CF45B4E00F59B52 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEE791CF45B4E00F59B52 /* UIView+WebCacheOperation.m */; };
 		9CCCFE4F1CEF0C920010A050 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCFE4E1CEF0C920010A050 /* Comic.swift */; };
-		9CCCFE521CEF186A0010A050 /* comic.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CCCFE511CEF186A0010A050 /* comic.json */; };
 		9CCCFE551CF315200010A050 /* ComicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCFE541CF315200010A050 /* ComicCell.swift */; };
 		B72C4C528BF77C605FD8152F /* Pods_MarvellousApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC535371351B6D3D01153395 /* Pods_MarvellousApp.framework */; };
 /* End PBXBuildFile section */
@@ -81,7 +80,6 @@
 		9CBBEE791CF45B4E00F59B52 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		9CBBEE8A1CF45C1900F59B52 /* MarvellousApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MarvellousApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		9CCCFE4E1CEF0C920010A050 /* Comic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
-		9CCCFE511CEF186A0010A050 /* comic.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = comic.json; sourceTree = "<group>"; };
 		9CCCFE541CF315200010A050 /* ComicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicCell.swift; sourceTree = "<group>"; };
 		DC535371351B6D3D01153395 /* Pods_MarvellousApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvellousApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -137,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				9CCCFE531CF314FD0010A050 /* Views */,
-				9CCCFE501CEF17B10010A050 /* Mocks */,
 				9CCCFE4D1CEF0C7E0010A050 /* Models */,
 				9C9CE5591CEDC7C60035E334 /* AppDelegate.swift */,
 				9C9CE55B1CEDC7C60035E334 /* FirstViewController.swift */,
@@ -154,8 +151,8 @@
 		9CBBEE571CF45B4E00F59B52 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				9CBBEE8A1CF45C1900F59B52 /* MarvellousApp-Bridging-Header.h */,
 				9CBBEE581CF45B4E00F59B52 /* SDWebImage */,
+				9CBBEE8A1CF45C1900F59B52 /* MarvellousApp-Bridging-Header.h */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -206,14 +203,6 @@
 				9CCCFE4E1CEF0C920010A050 /* Comic.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		9CCCFE501CEF17B10010A050 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				9CCCFE511CEF186A0010A050 /* comic.json */,
-			);
-			path = Mocks;
 			sourceTree = "<group>";
 		};
 		9CCCFE531CF314FD0010A050 /* Views */ = {
@@ -286,7 +275,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C9CE5661CEDC7C60035E334 /* LaunchScreen.storyboard in Resources */,
-				9CCCFE521CEF186A0010A050 /* comic.json in Resources */,
 				9C9CE5631CEDC7C60035E334 /* Assets.xcassets in Resources */,
 				9C9CE5611CEDC7C60035E334 /* Main.storyboard in Resources */,
 			);
