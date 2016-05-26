@@ -52,17 +52,18 @@ struct Comic {
 
 //MARK: Remote functions
 extension Comic {
-    static func getRemoteComics(completionHandler: Response<AnyObject, NSError> -> Void) {
+    static func getRemoteComics(offset: Int, completionHandler: Response<AnyObject, NSError> -> Void) {
         let apiKey = "c3901f9b2fb11e2322853b3ede27f438"
         let ts = "testtest"
         let hash = "1d312b3f93ad2dbbd2ab9af0a125b73a"
         
-        let param: [String : AnyObject] = ["apikey" : apiKey, "hash" : hash, "ts" : ts]
-        
+        let param: [String : AnyObject] = ["apikey" : apiKey, "hash" : hash, "ts" : ts, "offset" : offset]
         
         Alamofire.request(.GET, "http://gateway.marvel.com/v1/public/comics", parameters: param).responseJSON { response in
             
             completionHandler(response)            
         }
     }
+    
+    
 }

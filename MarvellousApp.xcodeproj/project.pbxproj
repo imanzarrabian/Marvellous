@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C599E5E1CF6D8EE00294660 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C599E5D1CF6D8EE00294660 /* DetailViewController.swift */; };
+		9C599E601CF7067100294660 /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C599E5F1CF7067100294660 /* LoadMoreCell.swift */; };
 		9C9CE55A1CEDC7C60035E334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9CE5591CEDC7C60035E334 /* AppDelegate.swift */; };
 		9C9CE55C1CEDC7C60035E334 /* ComicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9CE55B1CEDC7C60035E334 /* ComicsViewController.swift */; };
 		9C9CE55E1CEDC7C60035E334 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9CE55D1CEDC7C60035E334 /* SecondViewController.swift */; };
@@ -39,6 +40,7 @@
 		6E3FC20B2E3CBFE2D5480840 /* Pods-MarvellousApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvellousApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvellousApp/Pods-MarvellousApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8AF4E7F32042A9F1E51AA909 /* Pods-MarvellousApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvellousApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvellousApp/Pods-MarvellousApp.release.xcconfig"; sourceTree = "<group>"; };
 		9C599E5D1CF6D8EE00294660 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9C599E5F1CF7067100294660 /* LoadMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
 		9C9CE5561CEDC7C60035E334 /* MarvellousApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvellousApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9CE5591CEDC7C60035E334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C9CE55B1CEDC7C60035E334 /* ComicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				9CCCFE541CF315200010A050 /* ComicCell.swift */,
+				9C599E5F1CF7067100294660 /* LoadMoreCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C9CE55E1CEDC7C60035E334 /* SecondViewController.swift in Sources */,
+				9C599E601CF7067100294660 /* LoadMoreCell.swift in Sources */,
 				9CBBEE871CF45B4E00F59B52 /* UIImageView+HighlightedWebCache.m in Sources */,
 				9CBBEE881CF45B4E00F59B52 /* UIImageView+WebCache.m in Sources */,
 				9CBBEE861CF45B4E00F59B52 /* UIImage+WebP.m in Sources */,

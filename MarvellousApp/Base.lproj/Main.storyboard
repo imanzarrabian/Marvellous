@@ -76,6 +76,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="sJ5-7l-Bys" firstAttribute="leading" secondItem="U7B-7z-OeJ" secondAttribute="leading" constant="22" id="1g9-SV-5Iw"/>
+                                                <constraint firstItem="sJ5-7l-Bys" firstAttribute="top" secondItem="U7B-7z-OeJ" secondAttribute="topMargin" constant="35" id="2wp-iy-ftJ"/>
                                                 <constraint firstItem="Dcm-gU-PWp" firstAttribute="leading" secondItem="sJ5-7l-Bys" secondAttribute="trailing" constant="8" id="HTI-SQ-7nR"/>
                                                 <constraint firstAttribute="trailing" secondItem="Dcm-gU-PWp" secondAttribute="trailing" constant="51" id="M3w-TR-YIR"/>
                                                 <constraint firstItem="BZZ-QG-6e3" firstAttribute="top" secondItem="VsK-hT-eNe" secondAttribute="bottom" constant="13" id="XcW-cq-xz5"/>
@@ -83,7 +84,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="ECh-R2-M0b" secondAttribute="bottom" id="ZEG-6c-rHg"/>
                                                 <constraint firstItem="VsK-hT-eNe" firstAttribute="top" secondItem="Dcm-gU-PWp" secondAttribute="bottom" constant="16" id="d9f-qI-Dn2"/>
                                                 <constraint firstItem="VsK-hT-eNe" firstAttribute="leading" secondItem="sJ5-7l-Bys" secondAttribute="trailing" constant="8" id="fPA-KM-35p"/>
-                                                <constraint firstItem="sJ5-7l-Bys" firstAttribute="centerY" secondItem="U7B-7z-OeJ" secondAttribute="centerY" id="m0G-oA-oFy"/>
+                                                <constraint firstItem="ECh-R2-M0b" firstAttribute="top" secondItem="BZZ-QG-6e3" secondAttribute="bottom" constant="25" id="mff-9o-Ydx"/>
                                                 <constraint firstItem="ECh-R2-M0b" firstAttribute="leading" secondItem="sJ5-7l-Bys" secondAttribute="leading" id="sxG-6b-OMX"/>
                                                 <constraint firstItem="VsK-hT-eNe" firstAttribute="trailing" secondItem="Dcm-gU-PWp" secondAttribute="trailing" id="vJu-1q-hAM"/>
                                                 <constraint firstItem="Dcm-gU-PWp" firstAttribute="top" secondItem="sJ5-7l-Bys" secondAttribute="top" id="zAx-3l-V6t"/>
@@ -96,6 +97,34 @@
                                             <outlet property="priceLabel" destination="BZZ-QG-6e3" id="sL4-5A-E6o"/>
                                             <outlet property="titleLabel" destination="Dcm-gU-PWp" id="878-E2-A1R"/>
                                             <segue destination="rQO-qN-UBY" kind="show" id="eXc-ob-Fue"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadMoreCell" id="wz8-h1-LJY" customClass="LoadMoreCell" customModule="MarvellousApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="292" width="600" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wz8-h1-LJY" id="baa-yI-MYA">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kw8-vW-iqX">
+                                                    <rect key="frame" x="259" y="89" width="82" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Sj9-MI-0UI">
+                                                    <rect key="frame" x="349" y="90" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kw8-vW-iqX" firstAttribute="centerY" secondItem="baa-yI-MYA" secondAttribute="centerY" id="6b1-dP-HUy"/>
+                                                <constraint firstItem="Sj9-MI-0UI" firstAttribute="centerY" secondItem="kw8-vW-iqX" secondAttribute="centerY" id="FcU-dG-5ZP"/>
+                                                <constraint firstItem="Sj9-MI-0UI" firstAttribute="leading" secondItem="kw8-vW-iqX" secondAttribute="trailing" constant="8" id="JZe-T5-ZiL"/>
+                                                <constraint firstItem="kw8-vW-iqX" firstAttribute="centerX" secondItem="baa-yI-MYA" secondAttribute="centerX" id="KxO-qZ-KLH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="spinner" destination="Sj9-MI-0UI" id="f74-Wx-S4I"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
