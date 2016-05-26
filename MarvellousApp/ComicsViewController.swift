@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class ComicsViewController: UIViewController {
 
     var comicsArray: [Comic]?
     @IBOutlet weak var comicTV: UITableView!
@@ -40,9 +40,23 @@ class FirstViewController: UIViewController {
             }
         })
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        guard let cell = sender as? ComicCell,
+            let indexPath = comicTV.indexPathForCell(cell),
+            let vc = segue.destinationViewController as? DetailViewController else {
+                return
+        }
+        
+        let comic = comicsArray![indexPath.row]
+        print("comic \(comic.title)")
+        vc.comic = comic
+        
+    }
 }
 
-extension FirstViewController : UITableViewDelegate,UITableViewDataSource {
+extension ComicsViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comicsArray?.count ?? 0
