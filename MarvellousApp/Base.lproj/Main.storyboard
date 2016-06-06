@@ -235,13 +235,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="181.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="fullName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIk-aZ-QCM">
-                                                    <rect key="frame" x="269" y="15" width="62" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fullName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIk-aZ-QCM">
+                                                    <rect key="frame" x="31" y="77" width="88" height="28"/>
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OIk-aZ-QCM" firstAttribute="leading" secondItem="xDx-x4-9xd" secondAttribute="leadingMargin" constant="23" id="RYq-Co-wbf"/>
+                                                <constraint firstItem="OIk-aZ-QCM" firstAttribute="centerY" secondItem="xDx-x4-9xd" secondAttribute="centerY" id="RdG-fY-RBk"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="fullNameLabel" destination="OIk-aZ-QCM" id="91S-Bs-zu6"/>
