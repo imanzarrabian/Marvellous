@@ -24,6 +24,7 @@ struct Comic {
         return price == 0.0
     }
     
+    
     //Constructeur prenant en entrée un Dictionary
     //EXERCICE : UTILISER SWIFTYJSON
     init(dict: Dictionary<String, AnyObject>) {
@@ -61,9 +62,10 @@ extension Comic {
         
         Alamofire.request(.GET, "http://gateway.marvel.com/v1/public/comics", parameters: param).responseJSON { response in
             
+            //map [JSON] -> [Comic]
+            //crée un nouveau Result<[Comic], Error>
+            
             completionHandler(response)            
         }
     }
-    
-    
 }

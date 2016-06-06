@@ -37,8 +37,8 @@
                                                         <constraint firstAttribute="height" constant="114" id="Lbr-6C-3ls"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcm-gU-PWp">
-                                                    <rect key="frame" x="110" y="43" width="406" height="38"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcm-gU-PWp">
+                                                    <rect key="frame" x="110" y="43" width="406" height="39"/>
                                                     <string key="text">Comic Title     @IBOutlet weak var issueNumber: UILabel!
     @IBOutlet weak var issueNumber: UILabel!
     @IBOutlet weak var issueNumber: UILabel!
@@ -51,24 +51,24 @@
     @IBOutlet weak var issueNumber: UILabel!
     @IBOutlet weak var issueNumber: UILabel!
 </string>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comic Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZZ-QG-6e3">
-                                                    <rect key="frame" x="110" y="131" width="93" height="21"/>
+                                                    <rect key="frame" x="110" y="132" width="93" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comic Isbn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECh-R2-M0b">
-                                                    <rect key="frame" x="22" y="177" width="66" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Comic Isbn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECh-R2-M0b">
+                                                    <rect key="frame" x="22" y="178" width="66" height="13"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comic description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsK-hT-eNe">
-                                                    <rect key="frame" x="110" y="97" width="406" height="21"/>
+                                                    <rect key="frame" x="110" y="98" width="406" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -99,8 +99,43 @@
                                             <segue destination="rQO-qN-UBY" kind="show" id="eXc-ob-Fue"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadMoreCell" id="wz8-h1-LJY" customClass="LoadMoreCell" customModule="MarvellousApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CreatorCell" id="or7-Qr-Bf7" customClass="CreatorCell" customModule="MarvellousApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="292" width="600" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="or7-Qr-Bf7" id="MoY-DJ-2rg">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comicPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="R2w-bB-pOk">
+                                                    <rect key="frame" x="24" y="43" width="80" height="114"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="114" id="0yq-YB-W7a"/>
+                                                        <constraint firstAttribute="width" constant="80" id="QHo-FV-MAe"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4u-Am-wUv">
+                                                    <rect key="frame" x="125" y="43" width="422" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="e4u-Am-wUv" firstAttribute="leading" secondItem="R2w-bB-pOk" secondAttribute="trailing" constant="21" id="9My-JH-2DU"/>
+                                                <constraint firstItem="R2w-bB-pOk" firstAttribute="top" secondItem="MoY-DJ-2rg" secondAttribute="top" constant="43" id="B1f-ZP-7CM"/>
+                                                <constraint firstItem="R2w-bB-pOk" firstAttribute="leading" secondItem="MoY-DJ-2rg" secondAttribute="leading" constant="24" id="Cyw-sP-oCO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="R2w-bB-pOk" secondAttribute="bottom" constant="35" id="Fb9-AF-ydO"/>
+                                                <constraint firstAttribute="trailing" secondItem="e4u-Am-wUv" secondAttribute="trailing" constant="53" id="XSo-Fy-ghV"/>
+                                                <constraint firstItem="e4u-Am-wUv" firstAttribute="top" secondItem="R2w-bB-pOk" secondAttribute="top" id="gq2-IQ-Jjo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="creatorIV" destination="R2w-bB-pOk" id="cvP-pj-f8j"/>
+                                            <outlet property="nameLabel" destination="e4u-Am-wUv" id="m99-kU-etb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadMoreCell" id="wz8-h1-LJY" customClass="LoadMoreCell" customModule="MarvellousApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="492" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wz8-h1-LJY" id="baa-yI-MYA">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
@@ -142,7 +177,20 @@
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="sbV-bm-Fw6" secondAttribute="bottom" id="cTz-UL-wqc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dgm-ac-kfG"/>
+                    <navigationItem key="navigationItem" id="dgm-ac-kfG">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="KCj-MX-mkz">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Comics"/>
+                                <segment title="Creators"/>
+                            </segments>
+                            <connections>
+                                <action selector="valueChanged:" destination="9pv-A4-QxB" eventType="valueChanged" id="G5q-l5-FHv"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="comicTV" destination="sbV-bm-Fw6" id="meV-Jp-qah"/>
                     </connections>
@@ -263,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1034" y="379"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

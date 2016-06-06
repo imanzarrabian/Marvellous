@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C2192001D056BBB00C486F5 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2191FF1D056BBB00C486F5 /* Creator.swift */; };
+		9C2192041D057F9200C486F5 /* CreatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2192031D057F9200C486F5 /* CreatorCell.swift */; };
 		9C599E5E1CF6D8EE00294660 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C599E5D1CF6D8EE00294660 /* DetailViewController.swift */; };
 		9C599E601CF7067100294660 /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C599E5F1CF7067100294660 /* LoadMoreCell.swift */; };
 		9C9CE55A1CEDC7C60035E334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9CE5591CEDC7C60035E334 /* AppDelegate.swift */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		6E3FC20B2E3CBFE2D5480840 /* Pods-MarvellousApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvellousApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvellousApp/Pods-MarvellousApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8AF4E7F32042A9F1E51AA909 /* Pods-MarvellousApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvellousApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvellousApp/Pods-MarvellousApp.release.xcconfig"; sourceTree = "<group>"; };
+		9C2191FF1D056BBB00C486F5 /* Creator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
+		9C2192031D057F9200C486F5 /* CreatorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatorCell.swift; sourceTree = "<group>"; };
 		9C599E5D1CF6D8EE00294660 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9C599E5F1CF7067100294660 /* LoadMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
 		9C9CE5561CEDC7C60035E334 /* MarvellousApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvellousApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				9CCCFE4E1CEF0C920010A050 /* Comic.swift */,
+				9C2191FF1D056BBB00C486F5 /* Creator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			children = (
 				9CCCFE541CF315200010A050 /* ComicCell.swift */,
 				9C599E5F1CF7067100294660 /* LoadMoreCell.swift */,
+				9C2192031D057F9200C486F5 /* CreatorCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -254,6 +260,11 @@
 				TargetAttributes = {
 					9C9CE5551CEDC7C60035E334 = {
 						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -345,10 +356,12 @@
 				9C599E601CF7067100294660 /* LoadMoreCell.swift in Sources */,
 				9CBBEE871CF45B4E00F59B52 /* UIImageView+HighlightedWebCache.m in Sources */,
 				9CBBEE881CF45B4E00F59B52 /* UIImageView+WebCache.m in Sources */,
+				9C2192041D057F9200C486F5 /* CreatorCell.swift in Sources */,
 				9CBBEE861CF45B4E00F59B52 /* UIImage+WebP.m in Sources */,
 				9CBBEE821CF45B4E00F59B52 /* SDWebImagePrefetcher.m in Sources */,
 				9CCCFE4F1CEF0C920010A050 /* Comic.swift in Sources */,
 				9CBBEE7E1CF45B4E00F59B52 /* SDWebImageDecoder.m in Sources */,
+				9C2192001D056BBB00C486F5 /* Creator.swift in Sources */,
 				9CBBEE7F1CF45B4E00F59B52 /* SDWebImageDownloader.m in Sources */,
 				9C9CE55A1CEDC7C60035E334 /* AppDelegate.swift in Sources */,
 				9CBBEE811CF45B4E00F59B52 /* SDWebImageManager.m in Sources */,
